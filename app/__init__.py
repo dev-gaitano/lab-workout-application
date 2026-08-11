@@ -16,6 +16,8 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
+    from app.models import Exercise, Workout, WorkoutExercise
+
     register_blueprints(app)
 
     return app
