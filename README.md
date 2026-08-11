@@ -33,3 +33,24 @@ The frontend should expect the following backend endpoints:
 - `GET /exercises/<int:id>` - Fetch a single exercise
 - `POST /exercises` - Create a new exercise
 - `DELETE /exercises/<int:id>` - Delete an exercise
+
+## Project structure
+
+```
+.
+├── README.md                       # Project documentation
+├── app.py                          # Application entry point
+├── Dockerfile                      # Backend container config
+├── requirements.txt                # Python dependencies
+├── .env                            # Environment variables (local)
+├── app/                            # Application package
+│   ├── __init__.py                 # Application factory (create_app)
+│   ├── config.py                   # App configuration
+│   ├── extensions.py               # Flask extensions
+│   ├── api/                        # API Blueprints & Modular Routes
+│   │   ├── workouts/               # Workouts (routes, service, repository)
+│   │   └── exercises/              # Exercises (routes, service, repository)
+│   ├── database/                   # Database connection setup
+│   ├── models/                     # Domain data models
+│   └── utils/                      # Helper utilities
+```
