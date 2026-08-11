@@ -50,7 +50,6 @@ The frontend should expect the following backend endpoints:
 │   ├── api/                        # API Blueprints & Modular Routes
 │   │   ├── workouts/               # Workouts (routes, service, repository)
 │   │   └── exercises/              # Exercises (routes, service, repository)
-│   ├── database/                   # Database connection setup
 │   ├── models/                     # Domain data models
 │   └── utils/                      # Helper utilities
 ```
