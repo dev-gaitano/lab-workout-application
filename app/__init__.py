@@ -3,7 +3,7 @@ from flask import Flask
 from app.api import register_blueprints
 
 from .config import Config
-from .extensions import init_extensions
+from .extensions import init_extensions, db
 
 
 def create_app():
@@ -12,6 +12,8 @@ def create_app():
     app.config.from_object(Config)
 
     init_extensions(app)
+
+    db.init_app(app)
 
     register_blueprints(app)
 
