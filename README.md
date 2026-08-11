@@ -14,3 +14,22 @@ python3 app.py
 ```
 
 - API calls are configured to proxy to `http://localhost:5000`
+
+## API Endpoints
+
+The frontend should expect the following backend endpoints:
+
+### Workouts
+
+- `GET /workouts` - Fetch all workouts
+- `GET /workouts/<int:id>` - Fetch a single workout
+- `POST /workouts` - Create a new workout
+- `DELETE /workouts/<int:id>` - Delete a workout
+- `POST workouts/<workout_id>/exercises/<exercise_id>/workout_exercises` - Add an exercise to a workout, including reps/sets/duration
+
+### Exercises
+
+- `GET /exercises` - Fetch all exercises
+- `GET /exercises/<int:id>` - Fetch a single exercise
+- `POST /exercises` - Create a new exercise
+- `DELETE /exercises/<int:id>` - Delete an exercise
